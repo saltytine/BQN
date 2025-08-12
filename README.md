@@ -1,4 +1,4 @@
-*View this file with a real REPL [here](https://saltytine.github.io/BQN/index.html).*
+*You can also view this file with a real REPL [here](https://saltytine.github.io/BQN/index.html).*
 
 # BQN: finally, an APL for your flying saucer
 
