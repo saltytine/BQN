@@ -148,9 +148,9 @@ Base64 ← {
 }
 
 # Various URLs
-siteURL ← "https://mlochbaum.github.io/BQN/"
+siteURL ← "https://saltytine.github.io/BQN/"
 tryURL  ← siteURL∾"try.html#code="
-repoURL ← "https://github.com/mlochbaum/BQN"
+repoURL ← "https://github.com/saltytine/BQN"
 blobURL ← repoURL∾"/blob/master/"
 
 # Environments

@@ -2,14 +2,14 @@
 
 Author: Marshall Lochbaum and contributors
 License: ISC License
-Repository: https://github.com/mlochbaum/BQN
+Repository: https://github.com/saltytine/BQN
 
 INTRODUCTION                                    *bqn*
 
 This plugin provides syntax highlighting and a keymap
 for the BQN programming language. For more information
 about the language, see
-https://mlochbaum.github.io/BQN/
+https://saltytine.github.io/BQN/
 
 This plugin also has descriptions of BQN characters:
 press F1 to toggle a status line that describes the

@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/primitive/take.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/primitive/take.html).*
 
 # Implementation of Take and Drop
 

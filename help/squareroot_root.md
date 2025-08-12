@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/help/squareroot_root.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/help/squareroot_root.html).*
 
 # Root (`√`)
 

@@ -1,4 +1,4 @@
-*View this file with syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/perf.html).*
+*View this file with syntax highlighting [here](https://saltytine.github.io/BQN/implementation/perf.html).*
 
 # How does BQN perform?
 
@@ -22,7 +22,7 @@ There are two measurement tools in the [time](../spec/system.md#time) system val
 
 CBQN also has a `)time` command that prints the time taken by an entire expression, not counting compilation time. And a `)profile` command that samples where time was spent by the line—execution naturally has to be spread over several lines for this to be useful, and should take at least a few milliseconds too.
 
-The [bencharray](https://mlochbaum.github.io/bencharray/pages/summary.html) tool has a page showing primitive benchmarks with some explanations.
+The [bencharray](https://saltytine.github.io/bencharray/pages/summary.html) tool has a page showing primitive benchmarks with some explanations.
 
 If BQN isn't meeting your needs, there's always the option to hook up with C by [FFI](../doc/ffi.md). FFI calls have low overhead (tens of nanoseconds), but may require copying as data goes in or out.
 
@@ -34,7 +34,7 @@ The implementations I use for comparison are Dyalog APL, ngn/k, and J. I don't b
 
 Array operations are the way to get the most value out of an array language ([background reading](https://aplwiki.com/wiki/Performance)), so these languages tend to focus on them. But BQN tries to be usable in less array-oriented situations as well, and is faster for scalar code in the simple cases I've measured—things like naive Fibonacci or folding with a function that does some arithmetic. Dyalog is uniformly slow on such things, 5–10x worse than BQN. J is a bit better with tacit code and worse with explicit, 3–15x worse than BQN. And I measure ngn/k around 2x worse than BQN. For context, BQN is just slower than LuaJIT with the JIT off (which is still a fast interpreter), and I usually expect it to be about 10x slower than C in cases where C operations are compiling to single instructions (e.g. excluding auto-vectorization).
 
-I publish BQN benchmarks of array operations in [bencharray](https://mlochbaum.github.io/bencharray/pages/summary.html), and also use it to compare against J and Dyalog. BQN has a pretty big lead on these, beating the other languages in all but a few cases and often by margins of two or more. Now, I do tend to benchmark things that dzaima or I are actively working on speeding up, but at this point I've gotten to all the list operations that are important for performance. However, it's worth noting that these benchmarks cover straightforward cases where both arguments are numeric of the same width. Other cases may not need new core algorithms but do have to be handled explicitly, so BQN might miss them. Dyalog and J aren't immune to these sorts of problems but generally the older language has the edge in edge coverage.
+I publish BQN benchmarks of array operations in [bencharray](https://saltytine.github.io/bencharray/pages/summary.html), and also use it to compare against J and Dyalog. BQN has a pretty big lead on these, beating the other languages in all but a few cases and often by margins of two or more. Now, I do tend to benchmark things that dzaima or I are actively working on speeding up, but at this point I've gotten to all the list operations that are important for performance. However, it's worth noting that these benchmarks cover straightforward cases where both arguments are numeric of the same width. Other cases may not need new core algorithms but do have to be handled explicitly, so BQN might miss them. Dyalog and J aren't immune to these sorts of problems but generally the older language has the edge in edge coverage.
 
 We're working through the multi-dimensional operations, which is a domain no array language really nails yet (but at least they're not as abysmal at them as C). What we've finished can be many times faster than Dyalog, but Dyalog's coverage is still broader so there's no clear winner if a lot of arrays of rank 2 or more are used—I expect BQN will tend to have a higher performance ceiling, but require more knowledge and fiddling around to hit that ceiling. I think J is well behind these two in terms of generic array manipulation but it does have substantially better floating-point matrix operations, something BQN doesn't specialize in at all. K stores all arrays as nested lists, so it can't be as fast on high-rank arrays unless the last axis is long.
 

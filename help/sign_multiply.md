@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/help/sign_multiply.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/help/sign_multiply.html).*
 
 # Times (`×`)
 

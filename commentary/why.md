@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/commentary/why.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/commentary/why.html).*
 
 # Why use BQN?
 
@@ -43,7 +43,7 @@ BQN adopts [leading axis theory](../doc/leading.md) as developed in SHARP APL an
 
 Arguably BQN cuts down the set of primitives too much. Base conversion `⊥⊤`, partitioning `⊂⊆`, and matrix division `⌹` are commonly asked-for primitives, but they don't match [my conception](primitive.md) of a primitive. And while each can be implemented (with short snippets, other than `⌹` which requires a library), there's definitely a convenience loss. But there's always [ReBQN](../doc/rebqn.md)…
 
-BQN's version of the Power modifier `⍟` allows an array operand to specify multiple results, for example `Fn⍟(↕4)` to get 0 up to 3 iterations. Intermediate results are saved, so the number of calls only depends on the highest iteration number present. On the other hand, BQN has no direct equivalent of Power Limit `⍣≡`, requiring it to be [implemented manually](https://mlochbaum.github.io/bqncrate/?q=power%20limit).
+BQN's version of the Power modifier `⍟` allows an array operand to specify multiple results, for example `Fn⍟(↕4)` to get 0 up to 3 iterations. Intermediate results are saved, so the number of calls only depends on the highest iteration number present. On the other hand, BQN has no direct equivalent of Power Limit `⍣≡`, requiring it to be [implemented manually](https://saltytine.github.io/bqncrate/?q=power%20limit).
 
 An APL selective assignment `arr[2 3]+←1` should usually be written with [Under](../doc/under.md) in BQN: `1⊸+⌾(2‿3⊸⊏)arr` (but the correspondence might not always be so direct). You can think of this as a very fancy At (`@`) operator, that lets you pull out an arbitrary part of an array.
 

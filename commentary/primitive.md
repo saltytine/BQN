@@ -1,4 +1,4 @@
-*View this file with syntax highlighting [here](https://mlochbaum.github.io/BQN/commentary/primitive.html).*
+*View this file with syntax highlighting [here](https://saltytine.github.io/BQN/commentary/primitive.html).*
 
 # What is a primitive?
 

@@ -1,4 +1,4 @@
-*View this file with graphs and stuff [here](https://mlochbaum.github.io/BQN/community/aoc.html).*
+*View this file with graphs and stuff [here](https://saltytine.github.io/BQN/community/aoc.html).*
 
 # Advent of Code
 

@@ -4,7 +4,7 @@
   <link href="../style.css" rel="stylesheet"/>
   <title>BQN: Wild claims about K performance</title>
 </head>
-<div class="nav">(<a href="https://github.com/mlochbaum/BQN">github</a>) / <a href="../index.html">BQN</a> / <a href="index.html">implementation</a></div>
+<div class="nav">(<a href="https://github.com/saltytine/BQN">github</a>) / <a href="../index.html">BQN</a> / <a href="index.html">implementation</a></div>
 <h1 id="wild-claims-about-k-performance"><a class="header" href="#wild-claims-about-k-performance">Wild claims about K performance</a></h1>
 <p>Sometimes I see unsourced, unclear, vaguely mystical claims about K being the fastest array language. It happens often enough that I'd like to write a long-form rebuttal to these, and a demand that the people who make these do more to justify them.</p>
 <p>This isn't meant to put down the K language! K is in fact the only APL-family language other than BQN that I would recommend without reservations. Its C-based implementations certainly aren't slow, and choosing an array language based on performance is usually a bad idea anyway. And there's nothing wrong with the K community as a whole. Go to <a href="https://chat.stackexchange.com/rooms/90748/the-k-tree">the k tree</a> and meet them! (No, now it's the <a href="../community/forums.html">same chat</a> as BQN with Matrix room <a href="https://app.element.io/#/room/%23aplfarm-k:matrix.org">#aplfarm-k:matrix.org</a>, as well as <a href="https://app.element.io/#/room/%23ngnk:matrix.org">#ngnk:matrix.org</a>). What I want to fight is the <em>myth</em> of K, which is carried around as much by those who used K once upon a time, and no longer have any connection to it, as by active users.</p>
@@ -41,7 +41,7 @@
 <pre>  <span class='Value'>icache_16b.ifdata_stall</span>
        <span class='Bracket'>[</span><span class='Function'>Cycles</span> <span class='Value'>where</span> <span class='Value'>a</span> <span class='Value'>code</span> <span class='Value'>fetch</span> <span class='Value'>is</span> <span class='Value'>stalled</span> <span class='Value'>due</span> <span class='Value'>to</span> <span class='Function'>L1</span> <span class='Value'>instruction</span> <span class='Value'>cache</span> <span class='Value'>miss</span><span class='Bracket'>]</span>
 </pre>
-<p>That's just the whole cost (in cycles) of L1 misses, exactly what we want! First I'll run this on a J program I have lying around, building my old <a href="https://cdr.lib.unc.edu/concern/honors_theses/pg15bk00p">Honors thesis</a> with  <a href="https://github.com/mlochbaum/JtoLaTeX">JtoLaTeX</a>.</p>
+<p>That's just the whole cost (in cycles) of L1 misses, exactly what we want! First I'll run this on a J program I have lying around, building my old <a href="https://cdr.lib.unc.edu/concern/honors_theses/pg15bk00p">Honors thesis</a> with  <a href="https://github.com/saltytine/JtoLaTeX">JtoLaTeX</a>.</p>
 <pre> <span class='Function'>Performance</span> <span class='Value'>counter</span> <span class='Value'>stats</span> <span class='Value'>for</span> <span class='String'>'</span><span class='Value'>jlatex</span> <span class='Value'>document.jtex</span> <span class='Value'>nopdf</span><span class='String'>'</span><span class='Head'>:</span>
 
      <span class='Number'>1</span><span class='Separator'>,</span><span class='Number'>457</span><span class='Separator'>,</span><span class='Number'>284</span><span class='Separator'>,</span><span class='Number'>402</span>      <span class='Value'>cycles</span><span class='Head'>:</span><span class='Value'>u</span>
@@ -73,7 +73,7 @@
 
        <span class='Number'>2.138414849</span> <span class='Value'>seconds</span> <span class='Value'>time</span> <span class='Value'>elapsed</span>
 </pre>
-<p>And the Python-based font tool I use to build <a href="https://mlochbaum.github.io/BQN/fonts.html">font samples</a> for this site:</p>
+<p>And the Python-based font tool I use to build <a href="https://saltytine.github.io/BQN/fonts.html">font samples</a> for this site:</p>
 <pre> <span class='Function'>Performance</span> <span class='Value'>counter</span> <span class='Value'>stats</span> <span class='Value'>for</span> <span class='String'>'</span><span class='Value'>pyftsubset</span> <span class='Bracket'>[</span><span class='Value'>…more</span> <span class='Value'>stuff</span><span class='Bracket'>]</span><span class='String'>'</span><span class='Head'>:</span>
 
        <span class='Number'>499</span><span class='Separator'>,</span><span class='Number'>025</span><span class='Separator'>,</span><span class='Number'>775</span>      <span class='Value'>cycles</span><span class='Head'>:</span><span class='Value'>u</span>
@@ -85,7 +85,7 @@
        <span class='Number'>0.215698059</span> <span class='Value'>seconds</span> <span class='Value'>time</span> <span class='Value'>elapsed</span>
 </pre>
 <p>Dividing the stall number by total cycles gives us percentage of program time that can be attributed to L1 instruction misses.</p>
-<a class="replLink" title="Open in the REPL" target="_blank" href="https://mlochbaum.github.io/BQN/try.html#code=bCDihpAgIkoi4oC/IkJRTiLigL8iQlFOIuKAvyJQeXRob24iCmwg4omNy5ggMTAwIMOXIDU24oC/NC414oC/NDk04oC/MjUgw7cgMV80NTfigL8yMzLigL81XzYzM+KAvzQ5OQ==">↗️</a><pre>    <span class='Value'>l</span> <span class='Gets'>←</span> <span class='String'>&quot;J&quot;</span><span class='Ligature'>‿</span><span class='String'>&quot;BQN&quot;</span><span class='Ligature'>‿</span><span class='String'>&quot;BQN&quot;</span><span class='Ligature'>‿</span><span class='String'>&quot;Python&quot;</span>
+<a class="replLink" title="Open in the REPL" target="_blank" href="https://saltytine.github.io/BQN/try.html#code=bCDihpAgIkoi4oC/IkJRTiLigL8iQlFOIuKAvyJQeXRob24iCmwg4omNy5ggMTAwIMOXIDU24oC/NC414oC/NDk04oC/MjUgw7cgMV80NTfigL8yMzLigL81XzYzM+KAvzQ5OQ==">↗️</a><pre>    <span class='Value'>l</span> <span class='Gets'>←</span> <span class='String'>&quot;J&quot;</span><span class='Ligature'>‿</span><span class='String'>&quot;BQN&quot;</span><span class='Ligature'>‿</span><span class='String'>&quot;BQN&quot;</span><span class='Ligature'>‿</span><span class='String'>&quot;Python&quot;</span>
     <span class='Value'>l</span> <span class='Function'>≍</span><span class='Modifier'>˘</span> <span class='Number'>100</span> <span class='Function'>×</span> <span class='Number'>56</span><span class='Ligature'>‿</span><span class='Number'>4.5</span><span class='Ligature'>‿</span><span class='Number'>494</span><span class='Ligature'>‿</span><span class='Number'>25</span> <span class='Function'>÷</span> <span class='Number'>1_457</span><span class='Ligature'>‿</span><span class='Number'>232</span><span class='Ligature'>‿</span><span class='Number'>5_633</span><span class='Ligature'>‿</span><span class='Number'>499</span>
 ┌─                             
 ╵ "J"      3.8435140700068633  

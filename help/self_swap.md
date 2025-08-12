@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/help/self_swap.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/help/self_swap.html).*
 
 # Small Tilde (`˜`)
 

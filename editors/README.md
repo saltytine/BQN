@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/editors/index.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/editors/index.html).*
 
 # Editor support
 
@@ -6,7 +6,7 @@
 "style" Enc ".Comment,.Function,.Number,.String { color: inherit; }"
 -->
 
-Editor plugins and other tools for allowing BQN input are in [this folder](https://github.com/mlochbaum/BQN/tree/master/editors). Input always uses the layout shown [here](https://mlochbaum.github.io/BQN/keymap.html) ([want another?](#alternate-layouts)), and is usually performed with a backslash `\` prefix, but sometimes with a modifier key such as alt. To type an actual backslash, hit the backslash key twice.
+Editor plugins and other tools for allowing BQN input are in [this folder](https://github.com/saltytine/BQN/tree/master/editors). Input always uses the layout shown [here](https://saltytine.github.io/BQN/keymap.html) ([want another?](#alternate-layouts)), and is usually performed with a backslash `\` prefix, but sometimes with a modifier key such as alt. To type an actual backslash, hit the backslash key twice.
 
 Both the online REPL and CBQN support backslash input with no configuration required.
 
@@ -18,7 +18,7 @@ For **Android**, [this fork](https://github.com/dzaima/hackerskeyboard/releases/
 
 For **iPhone**, [this repository](https://github.com/gitonthescene/APLKeyboard) includes a BQN keyboard for the Pythonista IDE.
 
-The file [inputrc](https://github.com/mlochbaum/BQN/blob/master/editors/inputrc) can be copied or appended to `~/.inputrc` to enable backslash input in **bash**, BQN with **rlwrap**, and other software that uses GNU Readline.
+The file [inputrc](https://github.com/saltytine/BQN/blob/master/editors/inputrc) can be copied or appended to `~/.inputrc` to enable backslash input in **bash**, BQN with **rlwrap**, and other software that uses GNU Readline.
 
 Support for other editors, OSes, or workflows will be gladly accepted!
 
@@ -26,25 +26,25 @@ Support for other editors, OSes, or workflows will be gladly accepted!
 
 ### XKB (Unix)
 
-The file [bqn](https://github.com/mlochbaum/BQN/blob/master/editors/bqn) is for configuring XKB on Linux, or other systems using X11. It's installed as part of xkeyboard-config 2.36 and later, or can be copied to `/usr/share/X11/xkb/symbols/` for earlier versions. Then run
+The file [bqn](https://github.com/saltytine/BQN/blob/master/editors/bqn) is for configuring XKB on Linux, or other systems using X11. It's installed as part of xkeyboard-config 2.36 and later, or can be copied to `/usr/share/X11/xkb/symbols/` for earlier versions. Then run
 
     $ setxkbmap -layout us,bqn -option grp:switch
 
 replacing `us` with your ordinary keyboard layout. `switch` indicates the right alt key and can be replaced with `lswitch` for left alt or other codes. The setting will go away on shutdown, so you will probably want to configure it to run every time you start up. The way to do this depends on your desktop environment. For further discussion, see [Wikipedia](https://en.wikipedia.org/wiki/X_keyboard_extension) or the [APL Wiki](https://aplwiki.com/wiki/Typing_glyphs_on_Linux).
 
-Another XKB option is to place [XCompose](https://github.com/mlochbaum/BQN/blob/master/editors/XCompose) (possibly with adjustments) in `~/.XCompose` and enable a compose key. This can be done using either OS-specific settings or the following command:
+Another XKB option is to place [XCompose](https://github.com/saltytine/BQN/blob/master/editors/XCompose) (possibly with adjustments) in `~/.XCompose` and enable a compose key. This can be done using either OS-specific settings or the following command:
 
     $ setxkbmap -option compose:rwin
 
 ### Windows
 
-Folder [autohotkey-win](https://github.com/mlochbaum/BQN/tree/master/editors/autohotkey-win) contains an [AutoHotKey](https://en.wikipedia.org/wiki/AutoHotKey) script and the generated .exe file. It runs as an ordinary program that recognizes BQN key combinations system-wide, using the right alt key (to change this, replace `RAlt` in the script and rebuild). Move it to the startup folder if you'd like to have it running all the time. You can right-click its icon in the system tray to disable it temporarily.
+Folder [autohotkey-win](https://github.com/saltytine/BQN/tree/master/editors/autohotkey-win) contains an [AutoHotKey](https://en.wikipedia.org/wiki/AutoHotKey) script and the generated .exe file. It runs as an ordinary program that recognizes BQN key combinations system-wide, using the right alt key (to change this, replace `RAlt` in the script and rebuild). Move it to the startup folder if you'd like to have it running all the time. You can right-click its icon in the system tray to disable it temporarily.
 
-The [XCompose](https://github.com/mlochbaum/BQN/blob/master/editors/XCompose) file, although created for XKB, is also usable with [WinCompose](https://github.com/samhocevar/wincompose).
+The [XCompose](https://github.com/saltytine/BQN/blob/master/editors/XCompose) file, although created for XKB, is also usable with [WinCompose](https://github.com/samhocevar/wincompose).
 
 ### Mac
 
-There are two keyboard layouts: [one](https://github.com/mlochbaum/BQN/blob/master/editors/BQN.keylayout) enables BQN keys with the `Alt` modifier, and [another](https://github.com/mlochbaum/BQN/blob/master/editors/BQN_backslash.keylayout) uses the standard `\` prefix.
+There are two keyboard layouts: [one](https://github.com/saltytine/BQN/blob/master/editors/BQN.keylayout) enables BQN keys with the `Alt` modifier, and [another](https://github.com/saltytine/BQN/blob/master/editors/BQN_backslash.keylayout) uses the standard `\` prefix.
 
 To install:
 - Copy the appropriate `.keylayout` file to `~/Library/Keyboard Layouts/`.
@@ -71,7 +71,7 @@ Include `syntax on` in your .vimrc for syntax highlighting and `filetype plugin 
 
 To use vim-plug to install BQN support for vim, add this to your plugin section of your `.vimrc`:
 
-      Plug 'mlochbaum/BQN', {'rtp': 'editors/vim'}
+      Plug 'saltytine/BQN', {'rtp': 'editors/vim'}
 
 Then run `:PlugInstall`.
 

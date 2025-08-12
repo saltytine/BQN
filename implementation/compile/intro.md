@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/compile/intro.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/compile/intro.html).*
 
 # Array language compilation in context
 
@@ -50,7 +50,7 @@ The way that `+´` is evaluated using specialized code is that `´`, when invoke
 
 Array languages often optimize primitives or arithmetic combinations (folds, scans, table, rank) better than current C compilers handle the code a user would write for them. Partly this is because with C being so low-level it's hard to extract the meaning from this code (pointer aliasing can also get in the way). An array language implementer has an easier job since `-⌜` or `` ∨` `` is easy to detect. I also think C compilers just don't pay as much attention to array operations as they should. I can't imagine any reason why the C code for an integer prefix sum `` +` `` shouldn't generate SIMD code, but I've tried and failed to get gcc or clang to do it.
 
-Forms like `+´` are very simple examples of [tacit](../../doc/tacit.md) code. It's possible to compile more complex tacit forms as well. [I the language](https://github.com/mlochbaum/ILanguage) compiles some tacit programs directly to x86 machine code. For example, if a fold (maybe the equivalent of `(1+×)´`) is called on a list of at least 8 elements, then it attempts to determine the result type and compile code for the entire fold. It doesn't save this machine code, so in one way it's an extension to the treatment of `+´` that re-analyzes the function every time. However, generating code on demand makes it a true JIT compiler.
+Forms like `+´` are very simple examples of [tacit](../../doc/tacit.md) code. It's possible to compile more complex tacit forms as well. [I the language](https://github.com/saltytine/ILanguage) compiles some tacit programs directly to x86 machine code. For example, if a fold (maybe the equivalent of `(1+×)´`) is called on a list of at least 8 elements, then it attempts to determine the result type and compile code for the entire fold. It doesn't save this machine code, so in one way it's an extension to the treatment of `+´` that re-analyzes the function every time. However, generating code on demand makes it a true JIT compiler.
 
 ## Compiling array languages
 

@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/help/currentmodifier.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/help/currentmodifier.html).*
 
 # Mathematical Double-struck R (`𝕣`)
 

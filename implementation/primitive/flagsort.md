@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/primitive/flagsort.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/primitive/flagsort.html).*
 
 # Sortedness flags in primitive implementation
 

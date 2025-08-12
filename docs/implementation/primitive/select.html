@@ -4,7 +4,7 @@
   <link href="../../style.css" rel="stylesheet"/>
   <title>BQN: Implementation of Select</title>
 </head>
-<div class="nav">(<a href="https://github.com/mlochbaum/BQN">github</a>) / <a href="../../index.html">BQN</a> / <a href="../index.html">implementation</a> / <a href="index.html">primitive</a></div>
+<div class="nav">(<a href="https://github.com/saltytine/BQN">github</a>) / <a href="../../index.html">BQN</a> / <a href="../index.html">implementation</a> / <a href="index.html">primitive</a></div>
 <h1 id="implementation-of-select"><a class="header" href="#implementation-of-select">Implementation of Select</a></h1>
 <p><a href="../../doc/select.html">Select</a> is just a CPU load, right? Well, there is a bounds check first, but besides that, memory operations are slow. Yes, even if you use SIMD gathers—these get rid of some minor instruction dispatching overhead but they're still executed as a bunch of separate memory requests. This means that, while there's no replacement for select in the general case, there are many sub-cases that can be handled faster in other ways.</p>
 <p>The two important kinds of instructions for selection are the aforementioned <em>gather</em> instructions, which select multiple values from memory given a vector of indices, and <em>shuffle</em> instructions, which implement selection on a vector of indices and a vector of values. Shuffles don't touch memory and are many times faster.</p>

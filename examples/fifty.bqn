@@ -2,8 +2,8 @@
 # Yes, it only has this file and more will not be added
 # This file is from when there weren't many examples and now I don't want to break links
 # Look in these places for examples instead:
-# https://mlochbaum.github.io/bqncrate/
-# https://mlochbaum.github.io/BQN/community/index.html
+# https://saltytine.github.io/bqncrate/
+# https://saltytine.github.io/BQN/community/index.html
 
 # A history of APL in 50 functions
 # But they're BQN functions

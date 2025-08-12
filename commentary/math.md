@@ -1,4 +1,4 @@
-*View this file with no additional features [here](https://mlochbaum.github.io/BQN/commentary/math.html).*
+*View this file with no additional features [here](https://saltytine.github.io/BQN/commentary/math.html).*
 
 # Is BQN mathematics?
 

@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/vm.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/vm.html).*
 
 # The BQN virtual machine and runtime
 

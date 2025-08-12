@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/primitive/fold.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/primitive/fold.html).*
 
 # Implementation of Fold and Scan
 
@@ -16,7 +16,7 @@ For these operands, a fold can be done simply by combining two vector registers 
 
 ### Scan architecture
 
-There's lots of research on [parallel scan](https://en.wikipedia.org/wiki/Prefix_sum#Parallel_algorithms) with broadly useful ideas. Relevant ideas also show up in ALU design, where the shifting, broadcasting, and sequential algorithms below correspond to [Kogge-Stone](https://en.wikipedia.org/wiki/Kogge%E2%80%93Stone_adder), Sklansky, and ripple-carry adders. A fast CPU prefix sum is described in Singeli's [min-filter tutorial](https://github.com/mlochbaum/Singeli/blob/master/doc/minfilter.md) beginning at "we have some vector scan code already". There's also a treatment [here](https://en.algorithmica.org/hpc/algorithms/prefix/), but the blocking method seems overcomplicated when incorporating the carry after summing a register is enough to take care of dependency chains.
+There's lots of research on [parallel scan](https://en.wikipedia.org/wiki/Prefix_sum#Parallel_algorithms) with broadly useful ideas. Relevant ideas also show up in ALU design, where the shifting, broadcasting, and sequential algorithms below correspond to [Kogge-Stone](https://en.wikipedia.org/wiki/Kogge%E2%80%93Stone_adder), Sklansky, and ripple-carry adders. A fast CPU prefix sum is described in Singeli's [min-filter tutorial](https://github.com/saltytine/Singeli/blob/master/doc/minfilter.md) beginning at "we have some vector scan code already". There's also a treatment [here](https://en.algorithmica.org/hpc/algorithms/prefix/), but the blocking method seems overcomplicated when incorporating the carry after summing a register is enough to take care of dependency chains.
 
 Three associative scan algorithms make for useful components on a CPU core. The red paths show how, in each, an output involves every input up to its position exactly once.
 

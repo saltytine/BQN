@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/spec/complex.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/spec/complex.html).*
 
 # Specification: Complex numbers
 

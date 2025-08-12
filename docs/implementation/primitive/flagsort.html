@@ -4,7 +4,7 @@
   <link href="../../style.css" rel="stylesheet"/>
   <title>BQN: Sortedness flags in primitive implementation</title>
 </head>
-<div class="nav">(<a href="https://github.com/mlochbaum/BQN">github</a>) / <a href="../../index.html">BQN</a> / <a href="../index.html">implementation</a> / <a href="index.html">primitive</a></div>
+<div class="nav">(<a href="https://github.com/saltytine/BQN">github</a>) / <a href="../../index.html">BQN</a> / <a href="../index.html">implementation</a> / <a href="index.html">primitive</a></div>
 <h1 id="sortedness-flags-in-primitive-implementation"><a class="header" href="#sortedness-flags-in-primitive-implementation">Sortedness flags in primitive implementation</a></h1>
 <p>CBQN has flags for arrays to indicate that the cells are ordered (as if sorted): one for ascending ordering and one for descending. Both flags together mean all cells are the same. These flags can be set in many cases, and allow for faster operation in many primitives, including asymptotic improvements. They're particularly important for Bins (<code><span class='Function'>⍋⍒</span></code>) to avoid checking that a large <code><span class='Value'>𝕨</span></code> is sorted in order to search a much smaller <code><span class='Value'>𝕩</span></code>.</p>
 <h2 id="setting-flags"><a class="header" href="#setting-flags">Setting flags</a></h2>

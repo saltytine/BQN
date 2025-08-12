@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/doc/ffi.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/doc/ffi.html).*
 
 # Foreign Function Interface (FFI)
 
@@ -202,7 +202,7 @@ Casting also makes it possible to offset a pointer by a specific number of bytes
 
 Since strings present some encoding issues, and C has an unfortunate practice of using null-terminated strings everywhere, let's go over some details of how to work with these. To pass an ASCII string in, the appropriate type is `*u8:c8`, which as an [explicit conversion](#explicit-type-conversion) takes a list of 1-byte characters, and passes it as a list of 1-byte integers (sometimes C `char`s are signed ints, but the FFI just passes bits around so `i8` and `u8` behave the same way). Null-terminate the string explicitly in BQN by passing `str∾@` where `str` is the string itself.
 
-This format is also suitable for sequences of not-necessarily-ASCII bytes like the output of `•file.Bytes`. To pass unicode characters as UTF-8, you can use `•ToUTF8 str` in CBQN, and there are also pure BQN conversion functions in bqn-libs [strings.bqn](https://github.com/mlochbaum/bqn-libs/blob/master/strings.bqn).
+This format is also suitable for sequences of not-necessarily-ASCII bytes like the output of `•file.Bytes`. To pass unicode characters as UTF-8, you can use `•ToUTF8 str` in CBQN, and there are also pure BQN conversion functions in bqn-libs [strings.bqn](https://github.com/saltytine/bqn-libs/blob/master/strings.bqn).
 
 When a C function passes you back a string, you get a pointer, and to get a BQN list of characters you're going to have to hunt down that null byte. `*u8:c8` is allowed for the result type, but it gives a pointer with element type `u8:c8`, which means `Read` always returns a 1-character list instead of a single character. Let's use `*u8` instead. We could build the string during the search to read each character only once, but it's simpler and faster to use two passes:
 

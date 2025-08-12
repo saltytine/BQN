@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/help/first_pick.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/help/first_pick.html).*
 
 # Square Image Of Or Equal To (`⊑`)
 

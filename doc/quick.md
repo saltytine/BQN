@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/doc/quick.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/doc/quick.html).*
 
 # A quick start to BQN
 
@@ -35,7 +35,7 @@ Here's a little BQN program:
 
 It's not the most idiomatic BQN you'll see, but that's because this piece of code uses nearly all the syntax in the language (and a good number of the primitives).
 
-If you save it with the name hello.bqn and have BQN [installed](../running.md), the script can be run with `$ bqn hello.bqn` from a shell. Because of the `#!` line at the top, `$ ./hello.bqn` also works if `bqn` is in your path and hello.bqn is executable. It can also be run from another BQN file in the same directory, or REPL started there, using `•Import "hello.bqn"`. Or just copy-paste it into the [online REPL](https://mlochbaum.github.io/BQN/try.html).
+If you save it with the name hello.bqn and have BQN [installed](../running.md), the script can be run with `$ bqn hello.bqn` from a shell. Because of the `#!` line at the top, `$ ./hello.bqn` also works if `bqn` is in your path and hello.bqn is executable. It can also be run from another BQN file in the same directory, or REPL started there, using `•Import "hello.bqn"`. Or just copy-paste it into the [online REPL](https://saltytine.github.io/BQN/try.html).
 
 Now let's see how it works.
 

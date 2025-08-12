@@ -4,7 +4,7 @@
   <link href="../../style.css" rel="stylesheet"/>
   <title>BQN: Implementation of Take and Drop</title>
 </head>
-<div class="nav">(<a href="https://github.com/mlochbaum/BQN">github</a>) / <a href="../../index.html">BQN</a> / <a href="../index.html">implementation</a> / <a href="index.html">primitive</a></div>
+<div class="nav">(<a href="https://github.com/saltytine/BQN">github</a>) / <a href="../../index.html">BQN</a> / <a href="../index.html">implementation</a> / <a href="index.html">primitive</a></div>
 <h1 id="implementation-of-take-and-drop"><a class="header" href="#implementation-of-take-and-drop">Implementation of Take and Drop</a></h1>
 <p>The function <a href="../../doc/take.html">Take</a> on multidimensional arrays can be an important utility for working with arrays that have an odd cell shape. For example, a sorting algorithm on 25-bit cells would be very hard to write, but it's fast to expand each cell to 32 bits, sort, and trim back to 25 bits.</p>
 <h2 id="bit-interleaving-and-uninterleaving"><a class="header" href="#bit-interleaving-and-uninterleaving">Bit interleaving and uninterleaving</a></h2>

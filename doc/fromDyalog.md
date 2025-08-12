@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/doc/fromDyalog.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/doc/fromDyalog.html).*
 
 # BQN–Dyalog APL dictionary
 
@@ -146,7 +146,7 @@ The form `F⍣G` (Power with a function right operand; Power limit) can't be imp
 <tr><td> <code>⍕</code> </td><td colspan=2><code>•Fmt</code> (maybe <code>•Repr</code>)</td>        </tr>
 <tr><td> <code>⊥</code> </td><td>                              </td><td> <code>{+⟜(𝕨⊸×)´⌽𝕩}</code>    </td></tr>
 <tr><td> <code>⊤</code> </td><td>                              </td><td> <code>{𝕨|>⌊∘÷`⌾⌽𝕨«˜<𝕩}</code></td></tr>
-<tr><td> <code>⌹</code> </td><td><code>Inverse</code>,         </td><td> <code>Solve</code> from <a href="https://github.com/mlochbaum/bqn-libs/blob/master/matrix.bqn">here</a></td></tr>
+<tr><td> <code>⌹</code> </td><td><code>Inverse</code>,         </td><td> <code>Solve</code> from <a href="https://github.com/saltytine/bqn-libs/blob/master/matrix.bqn">here</a></td></tr>
 <tr><td> <code>⌷</code> </td><td> N/A                          </td><td> <code>⊏</code></td>        </tr>
 </table>
 

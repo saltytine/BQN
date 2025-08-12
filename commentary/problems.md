@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/commentary/problems.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/commentary/problems.html).*
 
 # Problems with BQN
 

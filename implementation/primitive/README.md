@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/primitive/index.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/primitive/index.html).*
 
 # Primitive implementation notes
 
@@ -15,7 +15,7 @@ Commentary on the best methods I know for implementing various primitives. Often
 - [Randomness](random.md)
 - [Data types](types.md)
 
-It may be helpful to read [bencharray](https://mlochbaum.github.io/bencharray/pages/summary.html) measurements and commentary in conjunction with these notes. In addition to the implementations themselves, the [CBQN](https://github.com/dzaima/CBQN) source code has comments at the top of many files in src/builtins/ that compactly list the methods used.
+It may be helpful to read [bencharray](https://saltytine.github.io/bencharray/pages/summary.html) measurements and commentary in conjunction with these notes. In addition to the implementations themselves, the [CBQN](https://github.com/dzaima/CBQN) source code has comments at the top of many files in src/builtins/ that compactly list the methods used.
 
 Raw speed is of course the most important factor; I also consider predictability and memory usage to be important. Predictability mostly for the benefit of the programmer, but it's also important when there are multiple algorithms to be able to compute which one will be fastest. In some cases an algorithm is best on some subset of inputs, but is effectively useless because it's too difficult to tell if the input falls in that set. Whitney and other K users sometimes profess that binary size is critically important; I don't believe this.
 

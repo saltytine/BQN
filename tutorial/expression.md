@@ -1,10 +1,10 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/tutorial/expression.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/tutorial/expression.html).*
 
 # Tutorial: BQN expressions
 
 ## Arithmetic
 
-All right, let's get started! Since you can run BQN online from the [REPL](https://mlochbaum.github.io/BQN/try.html) there aren't any real technical preliminaries, but if you'd like to look at non-web-based options head over to [running.md](../running.md).
+All right, let's get started! Since you can run BQN online from the [REPL](https://saltytine.github.io/BQN/try.html) there aren't any real technical preliminaries, but if you'd like to look at non-web-based options head over to [running.md](../running.md).
 
 In the code blocks shown here, input is highlighted and indented, while output is not colored or indented. To experiment with the code, you can click the `↗️` arrow in the top right corner to open it in the REPL.
 

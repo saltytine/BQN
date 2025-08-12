@@ -1,4 +1,4 @@
-*View this file with no extra features [here](https://mlochbaum.github.io/BQN/implementation/kclaims.html).*
+*View this file with no extra features [here](https://saltytine.github.io/BQN/implementation/kclaims.html).*
 
 # Wild claims about K performance
 
@@ -68,7 +68,7 @@ Look, you can measure this stuff. Linux has a nice tool called [perf](https://en
       icache_16b.ifdata_stall
            [Cycles where a code fetch is stalled due to L1 instruction cache miss]
 
-That's just the whole cost (in cycles) of L1 misses, exactly what we want! First I'll run this on a J program I have lying around, building my old [Honors thesis](https://cdr.lib.unc.edu/concern/honors_theses/pg15bk00p) with  [JtoLaTeX](https://github.com/mlochbaum/JtoLaTeX).
+That's just the whole cost (in cycles) of L1 misses, exactly what we want! First I'll run this on a J program I have lying around, building my old [Honors thesis](https://cdr.lib.unc.edu/concern/honors_theses/pg15bk00p) with  [JtoLaTeX](https://github.com/saltytine/JtoLaTeX).
 
      Performance counter stats for 'jlatex document.jtex nopdf':
 
@@ -102,7 +102,7 @@ Here are the BQN calls that build [CBQN](https://github.com/dzaima/CBQN)'s objec
 
            2.138414849 seconds time elapsed
 
-And the Python-based font tool I use to build [font samples](https://mlochbaum.github.io/BQN/fonts.html) for this site:
+And the Python-based font tool I use to build [font samples](https://saltytine.github.io/BQN/fonts.html) for this site:
 
      Performance counter stats for 'pyftsubset […more stuff]':
 

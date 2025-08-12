@@ -4,9 +4,9 @@
   <link href="../style.css" rel="stylesheet"/>
   <title>Specification: BQN primitives</title>
 </head>
-<div class="nav">(<a href="https://github.com/mlochbaum/BQN">github</a>) / <a href="../index.html">BQN</a> / <a href="index.html">spec</a></div>
+<div class="nav">(<a href="https://github.com/saltytine/BQN">github</a>) / <a href="../index.html">BQN</a> / <a href="index.html">spec</a></div>
 <h1 id="specification-bqn-primitives"><a class="header" href="#specification-bqn-primitives">Specification: BQN primitives</a></h1>
-<p>Most primitives are specified by the BQN-based implementation in <a href="https://github.com/mlochbaum/BQN/blob/master/spec/reference.bqn">reference.bqn</a>. This document specifies the basic functionality required by those definitions. Descriptions of other primitives are for informational purposes only.</p>
+<p>Most primitives are specified by the BQN-based implementation in <a href="https://github.com/saltytine/BQN/blob/master/spec/reference.bqn">reference.bqn</a>. This document specifies the basic functionality required by those definitions. Descriptions of other primitives are for informational purposes only.</p>
 <h2 id="pervasive-primitives"><a class="header" href="#pervasive-primitives">Pervasive primitives</a></h2>
 <p>Functions in this section are defined for atoms only; the reference implementations extend them to arrays.</p>
 <h3 id="arithmetic"><a class="header" href="#arithmetic">Arithmetic</a></h3>
@@ -74,7 +74,7 @@
 <li><strong>Catch</strong> (<code><span class='Modifier2'>⎊</span></code>) evaluates <code><span class='Function'>𝔽</span></code> on the arguments <code><span class='Value'>𝕨</span></code> (if present) and <code><span class='Value'>𝕩</span></code>. If <code><span class='Function'>𝔽</span></code> completes without error it returns the result, but if evaluation of <code><span class='Function'>𝔽</span></code> results in an error then the error is suppressed, and Catch evaluates <code><span class='Function'>𝔾</span></code> on the arguments and returns the result. Errors in <code><span class='Function'>𝔾</span></code> are not caught. Catch only prevents evaluation errors, and not syntax errors: these are considered errors in the program as a whole rather than any particular part of it.</li>
 </ul>
 <h2 id="commentary-on-other-primitives"><a class="header" href="#commentary-on-other-primitives">Commentary on other primitives</a></h2>
-<p>As noted above, see <a href="https://github.com/mlochbaum/BQN/blob/master/spec/reference.bqn">reference.bqn</a> for the authoritative definitions. Commentary here gives an overall description and highlights implementation subtleties and edge cases.</p>
+<p>As noted above, see <a href="https://github.com/saltytine/BQN/blob/master/spec/reference.bqn">reference.bqn</a> for the authoritative definitions. Commentary here gives an overall description and highlights implementation subtleties and edge cases.</p>
 <h3 id="combinators"><a class="header" href="#combinators">Combinators</a></h3>
 <p>There's little to say about BQN's true combinators, since each is simply a pattern of function application. All primitive combinators use their operands as functions, and thus treat a data operand as a constant function.</p>
 <ul>

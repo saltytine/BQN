@@ -1,4 +1,4 @@
-*View this file with syntax highlighting and working links [here](https://mlochbaum.github.io/BQN/keymap.html).*
+*View this file with syntax highlighting and working links [here](https://saltytine.github.io/BQN/keymap.html).*
 
 # BQN keymap
 

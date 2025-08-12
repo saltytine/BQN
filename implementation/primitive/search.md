@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/implementation/primitive/search.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/implementation/primitive/search.html).*
 
 # Implementation of search functions
 
@@ -89,7 +89,7 @@ As the searched-in array gets larger in a reverse lookup, ideal performance tend
 
 ## Partitioning
 
-[Robin Hood sort](https://github.com/mlochbaum/rhsort) sorts small uniform arrays quickly by considering hash tables as a way of sorting hashes. This cuts both ways: RH sort [slows down](https://github.com/mlochbaum/rhsort/blob/master/images/rand.svg) far more than other sorting methods on large arrays because of its random access patterns, and so do hash table operations. For large enough hash tables, it ought to make sense to bring in sorting-based methods in order to reduce the search size. As in quicksort, partitioning has two advantages in that it reduces the number of values to be compared and also their range. It does have a lot of memory usage because entries need to be copied rather than swapped for stability, and ordering data has to be kept around.
+[Robin Hood sort](https://github.com/saltytine/rhsort) sorts small uniform arrays quickly by considering hash tables as a way of sorting hashes. This cuts both ways: RH sort [slows down](https://github.com/saltytine/rhsort/blob/master/images/rand.svg) far more than other sorting methods on large arrays because of its random access patterns, and so do hash table operations. For large enough hash tables, it ought to make sense to bring in sorting-based methods in order to reduce the search size. As in quicksort, partitioning has two advantages in that it reduces the number of values to be compared and also their range. It does have a lot of memory usage because entries need to be copied rather than swapped for stability, and ordering data has to be kept around.
 
 [Partitioning](sort.md#in-place-partitioning) as in quicksort is possible, but I think stable [radix](sort.md#radix-sort) passes are almost always better. The typical problem with radix passes on high bits is that they might distribute values unevenly, but the values will either be searched with constant memory (lookup table) or redistributed (hash table). To undo a radix sort in a cache-friendly way, the original hash bits need to be kept around to retrace the steps. Even in cases where the original indices are known, traversing the radix-ed values and writing back to these indices makes many loops around the original array, moving too quickly for the cache to keep up.
 

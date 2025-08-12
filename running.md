@@ -1,4 +1,4 @@
-*View this file with results and syntax highlighting [here](https://mlochbaum.github.io/BQN/running.html).*
+*View this file with results and syntax highlighting [here](https://saltytine.github.io/BQN/running.html).*
 
 # How to run BQN
 
@@ -16,13 +16,13 @@ Third-party packages are available for several platforms. Because they run on an
 | Spack             | `cbqn`                                       | Source
 | iOS               | [Arrayground](https://apps.apple.com/us/app/arrayground/id6453522556) | App ([source](https://github.com/x86y/ibeacon))
 
-For tools related to running BQN, see the [editor plugins](editors/README.md) and [fonts page](https://mlochbaum.github.io/BQN/fonts.html). Also, [Beacon](https://github.com/x86y/beacon) is a cross-platform IDE just for BQN!
+For tools related to running BQN, see the [editor plugins](editors/README.md) and [fonts page](https://saltytine.github.io/BQN/fonts.html). Also, [Beacon](https://github.com/x86y/beacon) is a cross-platform IDE just for BQN!
 
 All these websites run BQN, in your browser unless marked with "server-side" (JS is native Javascript; the Wasm engine is WebAssembly compiled from CBQN).
 
 | Link | Style | Engine | Comments
 |------|-------|--------|---------
-| [Online REPL](https://mlochbaum.github.io/BQN/try.html) | One-shot | JS | "Explain", error marker
+| [Online REPL](https://saltytine.github.io/BQN/try.html) | One-shot | JS | "Explain", error marker
 | [BQNPAD](https://bqnpad.mechanize.systems/)      | Session  | JS, Wasm | Preview, syntax coloring
 | [BQN Editor](https://bqn.funmaker.moe/)          | One-shot | JS | Coloring, images, audio
 | [Attempt This Online](https://ato.pxeger.com/run?1=m704qTBvwYKlpSVpuhZoFJQGAA) | TIO | CBQN | Server-side
@@ -60,4 +60,4 @@ The only remaining dzaima/BQN script here is `test/dzaima`, which can be used to
 
 ## BQN2NGN
 
-[BQN2NGN](https://github.com/mlochbaum/BQN2NGN) is a prototype implementation in Javascript built to experiment with the language. It's now abandoned.
+[BQN2NGN](https://github.com/saltytine/BQN2NGN) is a prototype implementation in Javascript built to experiment with the language. It's now abandoned.
